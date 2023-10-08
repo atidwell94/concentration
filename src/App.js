@@ -76,43 +76,45 @@ class App extends Component {
         "Congratulations!  You found all 10 matches in " + this.state.tries + " tries!";
 
     return ( 
-      <div className="container" id="board">
-        <div className="pb-2" id="status">{status}</div>
-        <div className="row">
-          <div className="col-sm-1"></div>
-          {this.renderCard(0)}
-          {this.renderCard(1)}
-          {this.renderCard(2)}
-          {this.renderCard(3)}
-          {this.renderCard(4)}
-          <div className="col-1"></div>
-        </div>
-        <div className="row">
-          <div className="col-sm-1"></div>
-          {this.renderCard(5)}
-          {this.renderCard(6)}
-          {this.renderCard(7)}
-          {this.renderCard(8)}
-          {this.renderCard(9)}
-          <div className="col-1"></div>
-        </div>
-        <div className="row">
-          <div className="col-sm-1"></div>
-          {this.renderCard(10)}
-          {this.renderCard(11)}
-          {this.renderCard(12)}
-          {this.renderCard(13)}
-          {this.renderCard(14)}
-          <div className="col-1"></div>
-        </div>
-        <div className="row">
-          <div className="col-sm-1"></div>
-          {this.renderCard(15)}
-          {this.renderCard(16)}
-          {this.renderCard(17)}
-          {this.renderCard(18)}
-          {this.renderCard(19)}
-          <div className="col-1"></div>
+      <div id="top" className="container pt-5">
+        <div className="container" id="board">
+          <div className="pb-2" id="status">{status}</div>
+          <div className="row">
+            <div className="col-sm-1"></div>
+            {this.renderCard(0)}
+            {this.renderCard(1)}
+            {this.renderCard(2)}
+            {this.renderCard(3)}
+            {this.renderCard(4)}
+            <div className="col-1"></div>
+          </div>
+          <div className="row">
+            <div className="col-sm-1"></div>
+            {this.renderCard(5)}
+            {this.renderCard(6)}
+            {this.renderCard(7)}
+            {this.renderCard(8)}
+            {this.renderCard(9)}
+            <div className="col-1"></div>
+          </div>
+          <div className="row">
+            <div className="col-sm-1"></div>
+            {this.renderCard(10)}
+            {this.renderCard(11)}
+            {this.renderCard(12)}
+            {this.renderCard(13)}
+            {this.renderCard(14)}
+            <div className="col-1"></div>
+          </div>
+          <div className="row">
+            <div className="col-sm-1"></div>
+            {this.renderCard(15)}
+            {this.renderCard(16)}
+            {this.renderCard(17)}
+            {this.renderCard(18)}
+            {this.renderCard(19)}
+            <div className="col-1"></div>
+          </div>
         </div>
       </div>
       );
@@ -138,7 +140,7 @@ class App extends Component {
   }
 
   checkCards() {
-    let result = {...this.state.result};
+    let result = {...this.state};
     result.tries++;
     if (this.isMatch()) {
         result.matches++;
